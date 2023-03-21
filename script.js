@@ -5,22 +5,22 @@ const btn = document.querySelector('#btn')
 
 let array = []
 
-function addNumber() {
-
-
-}
-
 function getNumberArray() {
     let number = input.value
-    return number
-}
-addNumberToArray() {
+
     while (array.length < number) {
         array.push(array.length + 1)
+
+        let newLi = document.createElement('li')
+
+        li.appendChild(newLi)
+
+        newLi.innerHTML = array.length
+
     }
 }
 
-btn.addEventListener('click', addNumber)
+btn.addEventListener('click', getNumberArray)
 
 for (let i = 0; i < array.length; i++) {
 
