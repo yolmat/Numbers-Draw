@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Testes</title>
+    <title>Sorteie</title>
   </head>
   <body>
-    <main class="main">
-      <ul>
-        <li>1</li>
-      </ul>
-      <input
-        type="number"
-        name="AddNumber"
-        id="addNumber"
-        placeholder="Adicione um Numero"
-      />
-      <button id="btn">Aumente</button>
-    </main>
+    <div class="container">
+      <header class="header">
+        <h1>Sorteador de numeros</h1>
+      </header>
+      <main class="main">
+        <div>
+          <input
+            type="number"
+            name="AddNumber"
+            id="addNumber"
+            placeholder="Digite seu numero"
+            max="200"
+          />
+          <button id="btn">Sorteia</button>
+        </div>
+        <ul>
+          <li>1</li>
+        </ul>
+        <button id="btnReset">Reset</button>
+      </main>
+    </div>
   </body>
   <script src="./script.js"></script>
 </html>
