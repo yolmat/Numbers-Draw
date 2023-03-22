@@ -21,16 +21,16 @@ function getNumberArray() {
 
     const numberOfLuck = luckNumber()
 
-    console.log(numberOfLuck)
-
     while (array.length < number) {
         array.push(array.length + 1)
-
 
         let newLi = document.createElement('li')
 
         setTimeout(function () { ul.appendChild(newLi) }, 900)
 
+        if (numberOfLuck === array.length) {
+
+        }
 
         newLi.innerHTML = array.length
     }
