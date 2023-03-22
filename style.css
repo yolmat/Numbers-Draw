@@ -10,6 +10,7 @@
 
 body {
     background-color: rgba(0, 0, 0, 1);
+    overflow-x: hidden;
 }
 
 .container {
@@ -26,11 +27,12 @@ body {
     min-height: 20vh;
     width: 100%;
     display: flex;
-    background-color: antiquewhite;
+    background-color: #291a06;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     text-align: center;
+    color: #fff;
 }
 
 .main {
@@ -43,32 +45,34 @@ body {
     gap: .5rem;
 }
 
-div {
+.main div {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
 }
 
 .main input {
+    -moz-appearance: textfield;
+    appearance: textfield;
     padding: 0.5rem 5rem 0.5rem 1rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 10px;
 }
 
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-
 }
 
-input {
-    -moz-appearance: textfield;
-    appearance: textfield;
-
+.main input::placeholder {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 #btn {
     padding: 0.5rem 2rem;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 .main ul {
@@ -86,10 +90,18 @@ input {
     width: 2.5em;
     height: 2.5rem;
     border-radius: 25px;
-    background-color: aqua;
+    background-color: #1C8D7E;
+    color: #fff;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    border: 3px #0b3832 solid;
+}
+
+#firstItem {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
 }
 
 #btnReset {
