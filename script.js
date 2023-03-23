@@ -5,6 +5,7 @@ const firstLi = document.querySelector('#firstItem')
 const input = document.querySelector('#addNumber')
 const btn = document.querySelector('#btn')
 const btnReload = document.querySelector('#btnReset')
+const showNumber = document.querySelector('#showNumber')
 
 let array = []
 
@@ -25,11 +26,11 @@ function getNumberArray() {
         array.push(array.length + 1)
 
         let newLi = document.createElement('li')
-
+        newLi.classList.add(`${array.length}`)
         setTimeout(function () { ul.appendChild(newLi) }, 900)
 
         if (numberOfLuck === array.length) {
-
+            newLi.style.backgroundColor = "red"
         }
 
         newLi.innerHTML = array.length
