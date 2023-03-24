@@ -10,12 +10,18 @@ const showNumber = document.querySelector('#showNumber')
 const numberLuckShow = document.querySelector('#number')
 const btnClose = document.querySelector('.close')
 
-let array = []
+const timeResponse = 600
 
-function getNumberArray() {
-    let number = input.value
 
-    if (number > 200) {
+let numbers = []
+
+
+function showNumberInScreen() {
+    const numberOfLuck = numberDraw()
+
+    const number = input.value
+
+    if (number > 200 | number <= 1) {
         return
     }
 
@@ -23,46 +29,45 @@ function getNumberArray() {
 
     setTimeout(function () {
         firstLi.parentNode.removeChild(firstLi)
-    }, 900)
+    }, timeResponse)
 
-    const numberOfLuck = luckNumber()
-
-    while (array.length < number) {
-        array.push(array.length + 1)
+    while (numbers.length < number) {
+        numbers.push(numbers.length + 1)
 
         let newLi = document.createElement('li')
-        newLi.classList.add(`${array.length}`)
-        setTimeout(function () { ul.appendChild(newLi) }, 900)
+        newLi.classList.add(`${numbers.length}`)
+        setTimeout(function () { ul.appendChild(newLi) }, timeResponse)
 
-        if (numberOfLuck === array.length) {
+        if (numberOfLuck === numbers.length) {
             newLi.style.backgroundColor = '#ff1d0b'
         }
 
-        newLi.innerHTML = array.length
+        newLi.innerHTML = numbers.length
     }
+
 
     numberLuckShow.innerHTML = numberOfLuck
 
-    setTimeout(function () { showNumber.style.display = 'flex' }, 900)
+    setTimeout(function () { showNumber.style.display = 'flex' }, timeResponse)
 
     btn.disabled = true
 }
 
-btn.addEventListener('click', getNumberArray)
+btn.addEventListener('click', showNumberInScreen)
 
-function luckNumber() {
+function numberDraw() {
     let number = Math.floor(Math.random() * input.value) + 1
     return number
 }
 
 function reloadPage() {
-    window.location.reload()
+    return window.location.reload()
 }
 
 btnReload.addEventListener('click', reloadPage)
 
 function close() {
-    showNumber.style.display = 'none'
+    return showNumber.style.display = 'none'
 }
 
 btnClose.addEventListener('click', close)

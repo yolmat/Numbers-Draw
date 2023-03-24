@@ -75,6 +75,10 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
 }
 
+#btn:disabled {
+    display: none;
+}
+
 .main ul {
     display: flex;
     flex-flow: row wrap;
